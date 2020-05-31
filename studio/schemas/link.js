@@ -26,16 +26,6 @@ export default {
       type: 'reference',
       to: {type: 'category'},
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      validation: Rule => Rule.required(),
-      options: {
-        source: 'title',
-        maxLength: 96
-      }
     }
   ]
 }

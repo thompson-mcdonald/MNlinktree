@@ -20,16 +20,6 @@ export default {
       title: 'Links',
       type: 'array',
       of: [{type: 'reference', to: {type: 'link'}}]
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      validation: Rule => Rule.required(),
-      options: {
-        source: 'title',
-        maxLength: 96
-      }
     }
   ]
 }
