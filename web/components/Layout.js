@@ -29,6 +29,9 @@ const Bg = styled.div`
   background: fff;
   color: #111;
   padding: 3rem 0;
+  a:link, a:visited{
+    color: black;
+  }
 `
 
 const Alert = styled.div`
