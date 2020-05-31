@@ -52,7 +52,7 @@ class App extends BaseApp {
   render () {
     const {Component, pageProps} = this.props
     return (
-     <ThemeProvider theme={darkTheme}>
+     <ThemeProvider theme={lightTheme}>
        <GlobalStyles />
      <Background>
       <Container>
