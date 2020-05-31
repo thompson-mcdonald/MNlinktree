@@ -4,6 +4,14 @@ import client from '../client'
 // import 'normalize.css'
 import '../styles/shared.module.css'
 import '../styles/layout.css'
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from '../components/theme.js';
+import { GlobalStyles } from '../components/global.js';
+import styled from 'styled-components'
+
+const Background = styled.div`
+  background: ${({ theme }) => theme.body};
+`
 
 const siteConfigQuery = `
   *[_id == "global-config"] {
@@ -44,9 +52,14 @@ class App extends BaseApp {
   render () {
     const {Component, pageProps} = this.props
     return (
+     <ThemeProvider theme={darkTheme}>
+       <GlobalStyles />
+     <Background>
       <Container>
         <Component {...pageProps} />
       </Container>
+      </Background>
+      </ThemeProvider>
     )
   }
 }
