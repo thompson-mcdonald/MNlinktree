@@ -31,6 +31,7 @@ const Outer = styled.div`
 const Info = styled.div`
   a {
     padding: .5rem;
+    font-size: 1.2rem;
   }
   a:link, a:visited {
     color: white;
@@ -49,6 +50,12 @@ const BoxHalf = styled.div`
   h2 {
     font-size: 2rem;
     font-weight: normal;
+    margin-bottom: .4rem;
+  }
+  p {
+    font-size: 1.4rem;
+    opacity: .5;
+    margin: 0;
   }
 `
 
@@ -70,9 +77,9 @@ const LandingPage = ({categories}) => {
                 {cat.links && cat.links.map((l) => {
                   return (
                     <Outer>
-                      <Title><a href={l.url}>{l.title}</a></Title>
+                      <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
                       {l.donateUrl && (
-                        <Info><a href={l.donateUrl}>Make a Donation</a></Info>
+                        <Info><a href={l.donateUrl} target='_blank'>Make a Donation</a></Info>
                       )}
                     </Outer>
                   )
