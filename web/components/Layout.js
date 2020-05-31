@@ -40,6 +40,11 @@ const Alert = styled.div`
   padding: .2rem .8rem;
 `
 
+const Footer = styled.div`
+  font-size: 1.4rem;
+  margin-top: 2rem;
+`
+
 function Layout (props) {
   const {children} = props
   return (
@@ -65,6 +70,10 @@ function Layout (props) {
             <div className='content'>{children}</div>
           </div>
         </div>
+        <Footer>
+          Built by: <a href="https://instagram.com/senso_indo">@senso_indo</a>, <a href="https://instagram.com/names.fm">@names.fm</a>, <a href="https://instagram.com/jeffreymanful">@jeffreymanful</a> & <a href="https://instagram.com/0seans">@0seans</a>,
+        </Footer>
+
       </Content>
     </Bg>
   )
