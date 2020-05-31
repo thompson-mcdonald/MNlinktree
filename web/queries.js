@@ -9,7 +9,17 @@ export const getAllLinks = groq`*[_type == 'link']{
 
 export const getAllLinksByCategory = groq`*[_type == 'link' && category == $category]{
   'links': links[]->{
-    title, 
+    title,
+    url,
+    donateUrl
+  },
+}`
+
+export const getAllCategories = groq`*[_type == 'category']{
+  'title': title,
+  'description': description,
+  'links': links[]->{
+    title,
     url,
     donateUrl
   },
