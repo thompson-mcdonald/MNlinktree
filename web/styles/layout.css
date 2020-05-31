@@ -19,6 +19,7 @@ body,
 :global(#__next),
 :global(.container) {
   height: 100%;
+  width: 100%;
 }
 
 :global(.content) {
