@@ -31,3 +31,19 @@
     max-width: var(--narrow-container, 30rem);
   }
 }
+
+.light-mode {
+  background: white;
+  color: blue;
+}
+
+.dark-mode {
+  background: black;
+  color: white;
+}
+
+
+.dark-mode .content {
+  background: black;
+  color: white;
+}
