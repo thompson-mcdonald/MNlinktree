@@ -12,6 +12,11 @@ export default {
     {
       name: 'url',
       title: 'URL',
+      type: 'string'
+    },
+    {
+      name: 'donateUrl',
+      title: 'Donate URL',
       type: 'string',
       validation: Rule => Rule.required()
     },

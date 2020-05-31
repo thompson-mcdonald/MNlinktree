@@ -10,7 +10,11 @@ const LandingPage = ({links}) => {
     <Layout>
       {links.map((l) => {
         return (
-          <div><a href={l.url}>{l.title}</a></div>
+          <div>
+            <div><a href={l.url}>{l.title}</a></div>
+            <div><a href={l.donateUrl}>Make a Donation</a></div>
+            <div>{l.category.title}</div>
+          </div>
         )
       })}
     </Layout>
