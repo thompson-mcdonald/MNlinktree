@@ -17,8 +17,7 @@ export default {
     {
       name: 'donateUrl',
       title: 'Donate URL',
-      type: 'string',
-      validation: Rule => Rule.required()
+      type: 'string'
     },
     {
       name: 'category',
