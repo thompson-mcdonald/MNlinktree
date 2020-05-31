@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import BaseApp, {Container} from 'next/app'
 import client from '../client'
 // import 'normalize.css'
