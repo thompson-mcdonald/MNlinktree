@@ -51,6 +51,7 @@ const BoxHalf = styled.div`
     font-size: 2rem;
     font-weight: normal;
     margin-bottom: .4rem;
+    opacity: .7;
   }
   p {
     font-size: 1.4rem;
@@ -59,17 +60,56 @@ const BoxHalf = styled.div`
   }
 `
 
+const CTA = styled.a`
+  padding: 1rem;
+  border: 1px solid black;
+  text-decoration: none;
+  background: black;
+  &:link, &:visited {
+    color: white!important;
+  }
+  &:hover {
+    background: white;
+    border: 1px solid black;
+    transition: all .2s;
+    color: black!important;
+  }
+`
+
+const BtnRow = styled.div`
+  display: block;
+  margin: 2rem 0 2rem;
+`
+
 const LandingPage = ({categories}) => {
   console.log(categories)
+
+  const getRandomInt = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  const randomCause = (cat) => {
+    return cat[2].links[getRandomInt(20)]
+  }
+
+  console.log(categories[0].links[getRandomInt(2)].donateUrl)
+
   return (
     <Layout>
       <Head>
         <title>MNLINKS - BLACK LIVES MATTER</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
+
+      <BtnRow>
+        <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Donate to a Random Cause</CTA>
+      </BtnRow>
+
+      <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a></p>
+
       {categories && categories.map((cat) => {
         return (
-          <BoxHalf>
+          <BoxHalf id={cat.title}>
             <h2>{cat.title}</h2>
             <p>{cat.description}</p>
             <div>
