@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 const Nav = styled.div`
   display: flex;
-  width: 90%;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
@@ -14,6 +13,7 @@ const Nav = styled.div`
   width: 90%;
   margin: 0 auto;
   color: white;
+  max-width: 940px;
   a {
     width: 50%;
   }
@@ -28,6 +28,7 @@ const SubNav = styled.div`
   margin: 0 auto .2rem;
   padding: 1.5rem 0 1rem;
   overflow-x: scroll;
+  max-width: 940px;
   div {
     width: 165%;
   }
@@ -117,7 +118,7 @@ function Layout (props) {
           <p>In light of the recent protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting White Supremacy.</p>
           <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
         </Alert>
-        
+
         <div id='page-wrap'>
           <div className='container'>
             <div className='content'>{children}</div>
