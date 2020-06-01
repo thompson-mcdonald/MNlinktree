@@ -29,6 +29,7 @@ const SubNav = styled.div`
   padding: 1.5rem 0 1rem;
   overflow-x: scroll;
   max-width: 940px;
+  font-size: .8rem;
   div {
     width: 165%;
   }
@@ -45,6 +46,7 @@ const SubNav = styled.div`
     top: 70px;
   }
   @media (min-width: 740px) {
+    font-size: 1rem;
     &:after {
       display: none;
     }
