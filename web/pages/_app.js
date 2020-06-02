@@ -8,9 +8,11 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../components/theme.js';
 import { GlobalStyles } from '../components/global.js';
 import styled from 'styled-components'
+import DarkModeToggle from '../components/toggle/toggleMode';
 
 const Background = styled.div`
-  background: ${({ theme }) => theme.body};
+
+
 `
 
 const siteConfigQuery = `
@@ -49,6 +51,7 @@ class App extends BaseApp {
     })
   }
 
+
   render () {
     const {Component, pageProps} = this.props
     return (
@@ -56,6 +59,7 @@ class App extends BaseApp {
        <GlobalStyles />
      <Background>
       <Container>
+      <DarkModeToggle />
         <Component {...pageProps} />
       </Container>
       </Background>

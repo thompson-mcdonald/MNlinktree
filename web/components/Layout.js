@@ -86,7 +86,7 @@ const BgBlack = styled.div`
 
 const Alert = styled.div`
   background: #fff;
-  color: #111; 
+  color: #111;
   padding: .2rem .8rem;
   margin-top: 5rem;
   border: 1px solid #111;
@@ -123,7 +123,7 @@ function Layout (props) {
           </SubNav>
         </BgBlack>
 
-        <Alert>
+        <Alert className="alert">
           <p>Due of the large number of protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting White Supremacy.</p>
           <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
         </Alert>
@@ -133,7 +133,7 @@ function Layout (props) {
             <div className='content'>{children}</div>
           </div>
         </div>
-        <Footer>
+        <Footer className="footer">
           Built by: <a href="https://instagram.com/senso_indo">@senso_indo</a>, <a href="https://instagram.com/names.fm">@names.fm</a>, <a href="https://instagram.com/jeffreymanful">@jeffreymanful</a> & <a href="https://instagram.com/0seans">@0seans</a>
         </Footer>
 

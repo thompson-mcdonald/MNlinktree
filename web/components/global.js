@@ -24,4 +24,33 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 
+  body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+  }
+  body.dark-mode {
+    background-color: #1a1919;
+    color: #999;
+
+    a,
+    a:visited {
+        color: white !important;
+      }
+
+    .alert {
+      background: black;
+      color: white;
+    }
+
+     p, h2, .footer {
+       color: white;
+     }
+  }
+
+
+  body.dark-mode
+
+
+
   `

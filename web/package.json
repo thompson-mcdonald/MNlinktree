@@ -25,7 +25,8 @@
     "react-inlinesvg": "^0.8.4",
     "react-mailchimp-form": "^1.0.1",
     "react-mailchimp-subscribe": "^2.1.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
