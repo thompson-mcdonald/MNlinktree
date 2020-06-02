@@ -110,7 +110,7 @@ const LandingPage = ({categories}) => {
         <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Donate to a Random Cause</CTA>
       </BtnRow>
 
-      <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a></p>
+      <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
 
       {categories && categories.map((cat) => {
         return (
