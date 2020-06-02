@@ -31,7 +31,7 @@ const SubNav = styled.div`
   max-width: 940px;
   font-size: .8rem;
   div {
-    width: 165%;
+    width: 150%;
   }
   a {
     margin-right: 1rem;
@@ -46,6 +46,9 @@ const SubNav = styled.div`
     top: 70px;
   }
   @media (min-width: 740px) {
+    div {
+      max-width: 100%:
+    }
     font-size: 1rem;
     &:after {
       display: none;
@@ -85,7 +88,7 @@ const Alert = styled.div`
   background: #D15757;
   color: white; 
   padding: .2rem .8rem;
-  margin-top: 6rem;
+  margin-top: 8rem;
 `
 
 const Footer = styled.div`
@@ -117,7 +120,7 @@ function Layout (props) {
         </BgBlack>
 
         <Alert>
-          <p>In light of the recent protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting White Supremacy.</p>
+          <p>Due of the large numbere of protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting White Supremacy.</p>
           <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
         </Alert>
 
