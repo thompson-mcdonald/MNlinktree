@@ -31,7 +31,7 @@ const SubNav = styled.div`
   max-width: 940px;
   font-size: .8rem;
   div {
-    width: 150%;
+    width: 180%;
   }
   a {
     margin-right: 1rem;
