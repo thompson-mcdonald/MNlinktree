@@ -38,6 +38,11 @@ const Info = styled.div`
     text-decoration: none;
     background: #111;
   }
+  a:hover {
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+  }
 `
 
 const FlexBox = styled.div`
