@@ -36,7 +36,7 @@ const Info = styled.div`
   a:link, a:visited {
     color: white;
     text-decoration: none;
-    background: #D15757;
+    background: #111;
   }
 `
 

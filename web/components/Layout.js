@@ -85,10 +85,14 @@ const BgBlack = styled.div`
 `
 
 const Alert = styled.div`
-  background: #D15757;
-  color: white; 
+  background: #fff;
+  color: #111; 
   padding: .2rem .8rem;
-  margin-top: 8rem;
+  margin-top: 5rem;
+  border: 1px solid #111;
+  @media (min-width: 640px) {
+    margin-top: 6rem;
+  }
 `
 
 const Footer = styled.div`
@@ -130,7 +134,7 @@ function Layout (props) {
           </div>
         </div>
         <Footer>
-          Built by: <a href="https://instagram.com/senso_indo">@senso_indo</a>, <a href="https://instagram.com/names.fm">@names.fm</a>, <a href="https://instagram.com/jeffreymanful">@jeffreymanful</a> & <a href="https://instagram.com/0seans">@0seans</a>,
+          Built by: <a href="https://instagram.com/senso_indo">@senso_indo</a>, <a href="https://instagram.com/names.fm">@names.fm</a>, <a href="https://instagram.com/jeffreymanful">@jeffreymanful</a> & <a href="https://instagram.com/0seans">@0seans</a>
         </Footer>
 
       </Content>
