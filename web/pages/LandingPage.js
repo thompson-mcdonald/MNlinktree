@@ -76,7 +76,7 @@ const CTA = styled.a`
   border: 1px solid black;
   text-decoration: none;
   background: black;
-  margin-right: 1rem;
+  margin-right: .25rem;
   &:link, &:visited {
     color: white!important;
     border: 1px solid #eee;
@@ -116,7 +116,7 @@ const LandingPage = ({categories}) => {
 
       <BtnRow>
         <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Random Fund</CTA>
-        <CTA href='https://secure.actblue.com/donate/bail_funds_george_floyd' target='_blank'>Split a donation</CTA>/CTA>
+        <CTA href='https://secure.actblue.com/donate/bail_funds_george_floyd' target='_blank'>Split a donation</CTA>
       </BtnRow>
 
       <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
