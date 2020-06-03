@@ -16,20 +16,20 @@ export default class MyDocument extends Document {
       <Html lang={this.props.lang || 'en'}>
         <Head>
           <title>SUPPORTPEOPLE.ONLINE - BLACK LIVES MATTER</title>
-          <meta name="title" content="BLACK LIVES MATTER"></meta>
-          <meta name="description" content="Support those on the ground, online"></meta>
+          <meta name="title" content="BLACK LIVES MATTER" />
+          <meta name="description" content="Support those on the ground, online" />
 
-          <meta property="og:type" content="website"></meta>
-          <meta property="og:url" content="https://supportpeople.online/"></meta>
-          <meta property="og:title" content="BLACK LIVES MATTER"></meta>
-          <meta property="og:description" content="Support those on the ground, online"></meta>
-          <meta property="og:image" content="summary_large_image.png"></meta>
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://supportpeople.online/" />
+          <meta property="og:title" content="BLACK LIVES MATTER" />
+          <meta property="og:description" content="Support those on the ground, online" />
+          <meta property="og:image" content="/public/summary_large_image.png" />
 
-          <meta property="twitter:card" content="summary_large_image.png"></meta>
-          <meta property="twitter:url" content="https://supportpeople.online/"></meta>
-          <meta property="twitter:title" content="BLACK LIVES MATTER"></meta>
-          <meta property="twitter:description" content="Support those on the ground, online"></meta>
-          <meta property="twitter:image" content="summary_large_image.png"></meta>
+          <meta property="twitter:card" content="summary_large_image.png" />
+          <meta property="twitter:url" content="https://supportpeople.online/" />
+          <meta property="twitter:title" content="BLACK LIVES MATTER" />
+          <meta property="twitter:description" content="Support those on the ground, online" />
+          <meta property="twitter:image" content="/public/summary_large_image.png" />
         </Head>
 
         <body>
