@@ -51,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .headroom {
   will-change: transform;
-  transition: transform 200ms linear;
+  transition: all 0.5s ease-in-out 0s !important;
 }
 .headroom--pinned {
   transform: translateY(0%);
