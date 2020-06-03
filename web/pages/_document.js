@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <meta property="og:description" content="Support those on the ground, online" />
           <meta property="og:image" content="/summary_large_image.png" />
 
-          <meta property="twitter:card" content="summary_large_image.png" />
+          <meta property="twitter:card" content="/summary_large_image.png" />
           <meta property="twitter:url" content="https://supportpeople.online/" />
           <meta property="twitter:title" content="BLACK LIVES MATTER" />
           <meta property="twitter:description" content="Support those on the ground, online" />
@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
-          <script src="noflash.js" />
+          <script src="/noflash.js" />
           <Main />
           <NextScript />
         </body>
