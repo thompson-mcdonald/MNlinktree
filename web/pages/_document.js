@@ -22,17 +22,17 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://supportpeople.online/" />
           <meta property="og:title" content="BLACK LIVES MATTER" />
           <meta property="og:description" content="Support those on the ground, online" />
-          <meta property="og:image" content="/summary_large_image.png" />
+          <meta property="og:image" content="https://supportpeople.s3.eu-west-2.amazonaws.com/summary_large_image.png" />
 
           <meta property="twitter:card" content="/summary_large_image.png" />
           <meta property="twitter:url" content="https://supportpeople.online/" />
           <meta property="twitter:title" content="BLACK LIVES MATTER" />
           <meta property="twitter:description" content="Support those on the ground, online" />
-          <meta property="twitter:image" content="/summary_large_image.png" />
+          <meta property="twitter:image" content="https://supportpeople.s3.eu-west-2.amazonaws.com/summary_large_image.png" />
         </Head>
 
         <body>
-          <script src="/noflash.js" />
+          <script src="/noflash.js"></script>
           <Main />
           <NextScript />
         </body>

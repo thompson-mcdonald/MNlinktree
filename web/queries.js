@@ -1,6 +1,6 @@
 import groq from 'groq'
 
-export const getAllLinks = groq`*[_type == 'link']{
+export const getAllLinks = groq`*[_type == 'link'] | order(title) {
   'title': title,
   'url': url,
   'donateUrl': donateUrl,
@@ -15,7 +15,7 @@ export const getAllLinksByCategory = groq`*[_type == 'link' && category == $cate
   },
 }`
 
-export const getAllCategories = groq`*[_type == 'category']{
+export const getAllCategories = groq`*[_type == 'category'] | order(title) {
   'title': title,
   'description': description,
   'links': links[]->{

@@ -127,15 +127,16 @@ function Layout (props) {
             <div>
               <a href='#Bail Funds'>Bail Funds</a>
               <a href='#Protestor Resources'>Protestor Resources</a>
-              <a href='#Help for Black Businesse'>Help for Black Businesses</a>
+              <a href='#Help for Black Businesse'>Help for Black-owned Businesses</a>
               <a href='#Donations'>Donations</a>
             </div>
           </SubNav>
         </BgBlack>
 
         <Alert className="alert">
-          <p>Due of the large number of protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting White Supremacy.</p>
+          <p>Due of the large number of protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
           <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
+          <p><strong>Put https://supportpeople.online in your bio, or in a Swipe Up story (if you have over 10k followers)</strong></p>
         </Alert>
 
         <div id='page-wrap'>

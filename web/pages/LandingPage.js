@@ -7,12 +7,15 @@ import {getAllCategories} from '../queries'
 import styled from 'styled-components'
 
 const Title = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding-bottom: 1rem;
   a:link, a:visited {
     color: black;
     text-decoration: none;
     border-bottom: 1px solid #888;
+  }
+  a:hover {
+    opacity: .3
   }
 `
 
@@ -32,16 +35,19 @@ const Info = styled.div`
   a {
     padding: .5rem;
     font-size: 1.2rem;
+    margin-right: .5rem;
   }
   a:link, a:visited {
     color: white;
     text-decoration: none;
     background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   a:hover {
-    border: 1px solid #111;
+    border: 1px solid #fff;
     background: transparent;
     color: #111;
+    opacity: .3
   }
 `
 
@@ -70,11 +76,13 @@ const CTA = styled.a`
   border: 1px solid black;
   text-decoration: none;
   background: black;
+  margin-right: 1rem;
   &:link, &:visited {
     color: white!important;
+    border: 1px solid #eee;
   }
   &:hover {
-    background: white;
+    background: #888;
     border: 1px solid black;
     transition: all .2s;
     color: black!important;
@@ -107,7 +115,8 @@ const LandingPage = ({categories}) => {
       </Head>
 
       <BtnRow>
-        <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Donate to a Random Cause</CTA>
+        <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Random Fund</CTA>
+        <CTA href='https://secure.actblue.com/donate/bail_funds_george_floyd' target='_blank'>Split a donation</CTA>/CTA>
       </BtnRow>
 
       <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
@@ -123,9 +132,14 @@ const LandingPage = ({categories}) => {
                   return (
                     <Outer>
                       <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
-                      {l.donateUrl && (
-                        <Info><a href={l.donateUrl} target='_blank'>Make a Donation</a></Info>
+                      <Info>
+                      {l.url && (
+                       <a href={l.url} target='_blank'>View Info</a>
                       )}
+                      {l.donateUrl && (
+                        <a href={l.donateUrl} target='_blank'>+ Make a Donation</a>
+                      )}
+                      </Info>
                     </Outer>
                   )
                 })}
