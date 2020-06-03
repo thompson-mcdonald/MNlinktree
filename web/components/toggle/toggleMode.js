@@ -9,6 +9,7 @@ const ToggleButton = styled.div`
   right: 5%;
   display: flex;
   margin: 0 auto;
+  z-index: 9999;
   & > button {
     font-size: 1.2em;
     background: none;
