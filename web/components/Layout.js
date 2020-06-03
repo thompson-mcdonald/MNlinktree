@@ -14,12 +14,22 @@ const Nav = styled.div`
   margin: 0 auto;
   color: white;
   max-width: 940px;
+  font-size: .8rem;
+  h2 {
+    font-size: .8rem;
+  }
   a {
     width: 50%;
   }
   * {
     margin-bottom: 0;
     margin-top: 0;
+  }
+  @media (min-width: 700px) {
+    font-size: 1.2rem;
+    h2 {
+      font-size: 1.2rem;
+    }  
   }
 `
 
@@ -110,7 +120,7 @@ function Layout (props) {
       <Content id='outer-container'>
         <BgBlack>
           <Nav>
-            <h2>MNLINKS</h2>
+            <h2>SUPPORTPEOPLE.ONLINE</h2>
             <p>BLACK LIVES MATTER</p>
           </Nav>
           <SubNav>
