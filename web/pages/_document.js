@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
 
       <Html lang={this.props.lang || 'en'}>
         <Head>
-          <title>supportpeople.online</title>
           <meta name="title" content="BLACK LIVES MATTER"></meta>
           <meta name="description" content="Support those on the ground, online"></meta>
 
@@ -23,9 +22,9 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://supportpeople.online/"></meta>
           <meta property="og:title" content="BLACK LIVES MATTER"></meta>
           <meta property="og:description" content="Support those on the ground, online"></meta>
-          <meta property="og:image" content=""></meta>
+          <meta property="og:image" content="summary_large_image.png"></meta>
 
-          <meta property="twitter:card" content="summary_large_image"></meta>
+          <meta property="twitter:card" content="summary_large_image.png"></meta>
           <meta property="twitter:url" content="https://supportpeople.online/"></meta>
           <meta property="twitter:title" content="BLACK LIVES MATTER"></meta>
           <meta property="twitter:description" content="Support those on the ground, online"></meta>
