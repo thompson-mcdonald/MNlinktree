@@ -102,7 +102,7 @@ const LandingPage = ({categories}) => {
   return (
     <Layout>
       <Head>
-        <title>MNLINKS - BLACK LIVES MATTER</title>
+        <title>SUPPORTPEOPLE.ONLINE - BLACK LIVES MATTER</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
 
