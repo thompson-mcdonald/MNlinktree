@@ -17,7 +17,7 @@ const Nav = styled.div`
   max-width: 940px;
   font-size: .8rem;
   h2 {
-    font-size: .8rem;
+    font-size: .6rem;
   }
   a {
     width: 50%;
