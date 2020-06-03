@@ -16,8 +16,8 @@ const Nav = styled.div`
   color: white;
   max-width: 940px;
   font-size: .8rem;
-  h2 {
-    font-size: .6rem;
+  h2, p {
+    font-size: .7rem;
   }
   a {
     width: 50%;
@@ -99,10 +99,10 @@ const Alert = styled.div`
   background: #fff;
   color: #111;
   padding: .2rem .8rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
   border: 1px solid #111;
   @media (min-width: 640px) {
-    margin-top: 6rem;
+    margin-top: 2rem;
   }
 `
 
