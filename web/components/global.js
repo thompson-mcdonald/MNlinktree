@@ -49,7 +49,26 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
-  body.dark-mode
+  .headroom {
+  will-change: transform;
+  transition: all 0.5s ease-in-out 0s !important;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+.headroom {
+  background: #000;
+    width: 100%;
+    position: fixed !important;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+}
 
 
 

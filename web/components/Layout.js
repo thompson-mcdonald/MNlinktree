@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
+import Headroom from 'react-headroom'
 
 const Nav = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const Nav = styled.div`
   max-width: 940px;
   font-size: .8rem;
   h2 {
-    font-size: .8rem;
+    font-size: .6rem;
   }
   a {
     width: 50%;
@@ -29,7 +30,7 @@ const Nav = styled.div`
     font-size: 1.2rem;
     h2 {
       font-size: 1.2rem;
-    }  
+    }
   }
 `
 
@@ -75,20 +76,20 @@ const Content = styled.div`
 const Bg = styled.div`
   background: fff;
   color: #111;
-  padding: 3rem 0;
+  //padding: 3rem 0;
   a:link, a:visited {
     color: black;
   }
 `
 
 const BgBlack = styled.div`
-  background: #000;
+  /* background: #000;
   width: 100%;
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  padding-top: 1rem;
+  padding-top: 1rem; */
   a:link, a:visited {
     color: white;
   }
@@ -118,8 +119,10 @@ function Layout (props) {
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
       <Content id='outer-container'>
+      <Headroom>
         <BgBlack>
-          <Nav>
+
+          <Nav className='top-nav'>
             <h2>SUPPORTPEOPLE.ONLINE</h2>
             <p>BLACK LIVES MATTER</p>
           </Nav>
@@ -132,6 +135,7 @@ function Layout (props) {
             </div>
           </SubNav>
         </BgBlack>
+        </Headroom>
 
         <Alert className="alert">
           <p>Due to the large number of protests across the world in response to the murder of George Floyd; there is a need for donations to Bail Funds that allow people to get out of jail while protesting. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
