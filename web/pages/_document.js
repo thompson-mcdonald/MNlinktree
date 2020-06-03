@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
           <meta property="twitter:url" content="https://supportpeople.online/"></meta>
           <meta property="twitter:title" content="BLACK LIVES MATTER"></meta>
           <meta property="twitter:description" content="Support those on the ground, online"></meta>
-          <meta property="twitter:image" content=""></meta>
+          <meta property="twitter:image" content="summary_large_image.png"></meta>
         </Head>
 
         <body>
