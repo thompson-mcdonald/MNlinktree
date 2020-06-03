@@ -134,7 +134,7 @@ function Layout (props) {
         </BgBlack>
 
         <Alert className="alert">
-          <p>Due of the large number of protests across the world in response to the murder of George Floyd; there is a large need for donations to Bail Funds that allow people to get out of jail. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
+          <p>Due to the large number of protests across the world in response to the murder of George Floyd; there is a need for donations to Bail Funds that allow people to get out of jail while protesting. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
           <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
           <p><strong>Put https://supportpeople.online in your bio, or in a Swipe Up story (if you have over 10k followers)</strong></p>
         </Alert>
