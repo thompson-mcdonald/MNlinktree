@@ -71,6 +71,16 @@ const BoxHalf = styled.div`
   }
 `
 
+const CountryToggle = styled.div`
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  button {
+    color: white;
+    font-size: 20px;
+  }
+`
+
 const CTA = styled.a`
   padding: 1rem;
   border: 1px solid black;
@@ -104,6 +114,29 @@ const LandingPage = ({categories}) => {
   const randomCause = (cat) => {
     return cat[2].links[getRandomInt(20)]
   }
+
+  const filterByUk = (props) => {
+    console.log('button click')
+    categories && categories.map((cat) => {
+      console.log('cat:', cat)
+      cat.links.forEach(checkLinksCountry)
+      // Object.keys(a).map(function(key){return a[key]})
+
+    })
+  }
+
+  const checkLinksCountry = (item, index) => {
+    // console.log('yeet', props)
+    // console.log(`${item} has index ${index}`);
+    // console.log('object', Object.values(item));
+    const checkCountry = Object.values(item)[0]
+    if (checkCountry == 'UK') {
+      console.log('UK', item)
+
+    }
+  }
+
+
 
   console.log(categories[0].links[getRandomInt(2)].donateUrl)
 
@@ -149,6 +182,10 @@ const LandingPage = ({categories}) => {
           </BoxHalf>
         )
       })}
+
+      <CountryToggle>
+        <button onClick={filterByUk}>UK</button>
+      </CountryToggle>
     </Layout>
   )
 }
