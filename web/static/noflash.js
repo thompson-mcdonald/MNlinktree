@@ -38,4 +38,3 @@
     localStorage.setItem(storageKey, JSON.stringify(isDarkMode));
   }
 })();
-© 2020 GitHub, I

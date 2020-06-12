@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import sanityClient from '../client'
-import {getAllCategories} from '../queries'
+import {getAllLinksByCategoryAndCountry} from '../queries'
 // import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -122,7 +122,6 @@ const LandingPage = ({categories}) => {
       <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
 
       {categories && categories.map((cat) => {
-        console.log('cat:', cat)
         return (
           <BoxHalf id={cat.title}>
             <h2>{cat.title}</h2>
@@ -131,7 +130,7 @@ const LandingPage = ({categories}) => {
               <FlexBox>
                 {cat.links && cat.links.map((l) => {
                   return (
-                    <Outer country={l.country}>
+                    <Outer>
                       <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
                       <Info>
                       {l.url && (
@@ -162,5 +161,5 @@ LandingPage.propTypes = {
 
 LandingPage.getInitialProps = async () => ({
   // links: await sanityClient.fetch(getAllLinks),
-  categories: await sanityClient.fetch(getAllCategories)
+  categories: await sanityClient.fetch(getAllLinksByCategoryAndCountry)
 })

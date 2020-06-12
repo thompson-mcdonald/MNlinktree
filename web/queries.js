@@ -15,12 +15,22 @@ export const getAllLinksByCategory = groq`*[_type == 'link' && category == $cate
   },
 }`
 
+export const getAllLinksByCategoryAndCountry = groq`*[_type == 'link' && category == $category && country == $country]{
+  'links': links[]->{
+    title,
+    url,
+    donateUrl
+  },
+}`
+
 export const getAllCategories = groq`*[_type == 'category'] | order(title) {
   'title': title,
   'description': description,
   'links': links[]->{
     title,
     url,
-    donateUrl
+    donateUrl,
+    'country': country->location
   },
+
 }`

@@ -25,6 +25,13 @@ export default {
       type: 'reference',
       to: {type: 'category'},
       validation: Rule => Rule.required()
-    }
+    },
+    {
+      name: 'country',
+      title: 'Country',
+      type: 'reference',
+      to: {type: 'country'},
+      validation: Rule => Rule.required()
+    },
   ]
 }

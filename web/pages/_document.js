@@ -9,10 +9,8 @@ export default class MyDocument extends Document {
       return {...initialProps, lang}
     })
   }
-
   render () {
     return (
-
       <Html lang={this.props.lang || "en"}>
         <Head>
           <meta name="title" content="BLACK LIVES MATTER" />
@@ -32,7 +30,7 @@ export default class MyDocument extends Document {
         </Head>
 
         <body>
-          <script src="/noflash.js"></script>
+          <script src="https://supportpeople.online/noflash.js"></script>
           <Main />
           <NextScript />
         </body>
