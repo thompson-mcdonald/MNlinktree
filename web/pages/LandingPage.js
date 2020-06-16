@@ -94,6 +94,17 @@ const BtnRow = styled.div`
   margin: 2rem 0 2rem;
 `
 
+const Alert = styled.div`
+  background: #fff;
+  color: #111;
+  padding: .2rem .8rem;
+  margin-top: 1rem;
+  border: 1px solid #111;
+  @media (min-width: 640px) {
+    margin-top: 2rem;
+  }
+`
+
 const LandingPage = ({categories}) => {
   console.log(categories)
 
@@ -105,14 +116,39 @@ const LandingPage = ({categories}) => {
     return cat[2].links[getRandomInt(20)]
   }
 
+  const navItems = [
+    {
+      name: 'Bail Funds',
+      link: '#Bail%20Funds'
+    },
+    {
+      name: 'Protestor Resources',
+      link: '#Protestor%20Resources'
+    },
+    {
+      name: 'Help for Black-Owned Businesses',
+      link: '#Help%20for%20Black%20Businesses'
+    },
+    {
+      name: 'Donations',
+      link: '#Donations'
+    }
+  ]
+
   console.log(categories[0].links[getRandomInt(2)].donateUrl)
 
   return (
-    <Layout>
+    <Layout navigation={navItems} pageTitle='BLACK LIVES MATTER'>
       <Head>
         <title>SUPPORTPEOPLE.ONLINE - BLACK LIVES MATTER</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
+
+      <Alert className="alert">
+        <p>Due to the large number of protests across the world in response to the murder of George Floyd; there is a need for donations to Bail Funds that allow people to get out of jail while protesting. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
+        <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
+        <p><strong>Put https://supportpeople.online in your bio, or in a Swipe Up story (if you have over 10k followers)</strong></p>
+      </Alert>
 
       <BtnRow>
         <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Random Fund</CTA>
@@ -133,12 +169,12 @@ const LandingPage = ({categories}) => {
                     <Outer>
                       <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
                       <Info>
-                      {l.url && (
-                       <a href={l.url} target='_blank'>View Info</a>
-                      )}
-                      {l.donateUrl && (
-                        <a href={l.donateUrl} target='_blank'>+ Make a Donation</a>
-                      )}
+                        {l.url && (
+                          <a href={l.url} target='_blank'>View Info</a>
+                        )}
+                        {l.donateUrl && (
+                          <a href={l.donateUrl} target='_blank'>+ Make a Donation</a>
+                        )}
                       </Info>
                     </Outer>
                   )

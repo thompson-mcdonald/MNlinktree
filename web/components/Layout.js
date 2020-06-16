@@ -95,53 +95,36 @@ const BgBlack = styled.div`
   }
 `
 
-const Alert = styled.div`
-  background: #fff;
-  color: #111;
-  padding: .2rem .8rem;
-  margin-top: 1rem;
-  border: 1px solid #111;
-  @media (min-width: 640px) {
-    margin-top: 2rem;
-  }
-`
-
 const Footer = styled.div`
   font-size: 1.4rem;
   margin-top: 2rem;
 `
 
 function Layout (props) {
-  const {children} = props
+  const {children, navigation, pageTitle} = props
   return (
     <Bg>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
       <Content id='outer-container'>
-      <Headroom>
-        <BgBlack>
-
-          <Nav className='top-nav'>
-            <h2>SUPPORTPEOPLE.ONLINE</h2>
-            <p>BLACK LIVES MATTER</p>
-          </Nav>
-          <SubNav>
-            <div>
-              <a href='#Bail Funds'>Bail Funds</a>
-              <a href='#Protestor Resources'>Protestor Resources</a>
-              <a href='#Help for Black Businesse'>Help for Black-owned Businesses</a>
-              <a href='#Donations'>Donations</a>
-            </div>
-          </SubNav>
-        </BgBlack>
+        <Headroom>
+          <BgBlack>
+            <Nav className='top-nav'>
+              <h2>SUPPORTPEOPLE.ONLINE</h2>
+              <p>{pageTitle}</p>
+            </Nav>
+            <SubNav>
+              <div>
+                {navigation && navigation.map(item => (
+                  <a href={item.link} key={item.link}>
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </SubNav>
+          </BgBlack>
         </Headroom>
-
-        <Alert className="alert">
-          <p>Due to the large number of protests across the world in response to the murder of George Floyd; there is a need for donations to Bail Funds that allow people to get out of jail while protesting. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
-          <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
-          <p><strong>Put https://supportpeople.online in your bio, or in a Swipe Up story (if you have over 10k followers)</strong></p>
-        </Alert>
 
         <div id='page-wrap'>
           <div className='container'>
@@ -158,7 +141,8 @@ function Layout (props) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node)
+  children: PropTypes.arrayOf(PropTypes.node),
+  navigation: PropTypes.arrayOf(PropTypes.node)
 }
 
 export default Layout
