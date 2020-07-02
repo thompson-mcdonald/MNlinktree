@@ -31,10 +31,61 @@ html {
   }
 
   body.light-mode {
+
   background-color: #fff;
   color: #333;
   transition: background-color 0.3s ease;
+
+  body::selection {
+    background-color: blue;
+    color: white;
   }
+
+  .bubble {
+    background: white;
+    color: black;
+    border: 1px solid #474747;
+    svg {
+      g {
+        fill: #474747;
+      }
+    }
+  }
+
+  .yemen .button {
+    background: #F9C701 !important;
+    color: black !important;
+    &:hover {
+      background: #F9C701 !important;
+      opacity: 1;
+      border-color: #FAC800;
+    }
+
+  }
+
+  .blacklivesmatter .button {
+    background: #ce4b49 !important;
+    border: 1px solid #ce4b49;
+    color: black;
+    opacity: 1;
+  }
+
+  .cause.blm {
+    &:after {
+      background: #ce4b49;
+    }
+
+  }
+
+  .cause.yemen {
+    &:after {
+      background: #F9C701;  
+    }
+  }
+
+}
+
+
   body.dark-mode {
     background-color: #1a1919;
     color: #999;
@@ -51,6 +102,29 @@ html {
 
      p, h2, .footer {
        color: white;
+     }
+
+     .bubble {
+       background: #474747;
+       border: 1px solid #474747;
+       // &:hover {
+       //     background: #61a54b;
+       // }
+       svg {
+         g {
+           fill: white;
+         }
+       }
+     }
+
+     .yemen .button {
+       background: #F9C701 !important;
+       color: black !important;
+       &:hover {
+         background: #F9C701 !important;
+         opacity: 1;
+         border-color: #FAC800;
+       }
      }
   }
 
@@ -75,6 +149,8 @@ html {
     left: 0;
     padding-top: 1rem;
 }
+
+
 
 
 

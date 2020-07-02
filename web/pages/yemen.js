@@ -5,6 +5,7 @@ import sanityClient from '../client'
 import {getYemenLinks} from '../queries'
 // import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import BubbleText from '../components/BubbleText'
 
 const Title = styled.div`
   font-size: 1.6rem;
@@ -107,14 +108,15 @@ const Alert = styled.div`
 
 const LandingPage = ({yemen}) => {
   return (
-    <Layout pageTitle="HELP YEMEN">
+    <Layout pageTitle="HELP YEMEN" childPage>
       <Head>
         <title>SUPPORTPEOPLE.ONLINE - BLACK LIVES MATTER</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
       <Alert className="alert">
-        <p>Yemen is being devastated by famine, civil war & COVID-19. We've collated a list of funds and places we can lend our support to provide food, equipment and protection. </p>
-        <p><strong>Put https://supportpeople.onlin/yemen in your bio, or in a Swipe Up story (if you have over 10k followers)</strong></p>
+      <p>Yemen is suffering one of the largest humanitarian crisis of modern times. Currently devastated simultaneously by civil war, epidemic, famine & COVID-19. The healthcare system of Yemen has essentially collapsed with conflict devastating families and in particular - children.
+      With United Nation pleas for financial aid from governing bodies and governments, we've collated a list of funds and places that we as citizins of the world can lend our support to provide food, equipment and protection for those in need or providing support.</p>
+      <BubbleText />
       </Alert>
 
       <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
@@ -122,14 +124,14 @@ const LandingPage = ({yemen}) => {
 
         {yemen && yemen.map((l) => {
           return (
-            <Outer>
+            <Outer className='yemen'>
               <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
               <Info>
                 {l.url && (
-                  <a href={l.url} target='_blank'>View Info</a>
+                  <a className='button' href={l.url} target='_blank'>View Info</a>
                 )}
                 {l.donateUrl && (
-                  <a href={l.donateUrl} target='_blank'>+ Make a Donation</a>
+                  <a className='button' href={l.donateUrl} target='_blank'>+ Make a Donation</a>
                 )}
               </Info>
             </Outer>

@@ -16,11 +16,16 @@ const Nav = styled.div`
   color: white;
   max-width: 940px;
   font-size: .8rem;
+  padding: 1.5rem 0;
   h2, p {
     font-size: .7rem;
   }
   a {
     width: 50%;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
   * {
     margin-bottom: 0;
@@ -38,6 +43,7 @@ const SubNav = styled.div`
   width: 90%;
   margin: 0 auto .2rem;
   padding: 1.5rem 0 1rem;
+  padding-top: 0;
   overflow-x: scroll;
   max-width: 940px;
   font-size: .8rem;
@@ -101,9 +107,27 @@ const Footer = styled.div`
 `
 
 function Layout (props) {
-  const {children, navigation, pageTitle} = props
+  const {children, navigation, pageTitle, theme, childPage} = props
+  const renderSubNav = ()=>{
+    if (childPage) {
+      console.log('child page prop present')
+      return (
+        <SubNav>
+          <div>
+            {navigation && navigation.map(item => (
+              <a href={item.link} key={item.link}>
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </SubNav>
+      )
+    } else {
+      console.log('child page prop NOT present')
+    }
+  }
   return (
-    <Bg>
+    <Bg theme={theme} childPage={childPage}>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
@@ -111,18 +135,10 @@ function Layout (props) {
         <Headroom>
           <BgBlack>
             <Nav className='top-nav'>
-              <h2>SUPPORTPEOPLE.ONLINE</h2>
+              <a href="/"><h2>SUPPORTPEOPLE.ONLINE</h2></a>
               <p>{pageTitle}</p>
             </Nav>
-            <SubNav>
-              <div>
-                {navigation && navigation.map(item => (
-                  <a href={item.link} key={item.link}>
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </SubNav>
+            {renderSubNav(childPage)}
           </BgBlack>
         </Headroom>
 
@@ -142,7 +158,8 @@ function Layout (props) {
 
 Layout.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
-  navigation: PropTypes.arrayOf(PropTypes.node)
+  navigation: PropTypes.arrayOf(PropTypes.node),
+  // childPage: string
 }
 
 export default Layout
