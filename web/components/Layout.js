@@ -104,6 +104,7 @@ const BgBlack = styled.div`
 const Footer = styled.div`
   font-size: 1.4rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 `
 
 function Layout (props) {
