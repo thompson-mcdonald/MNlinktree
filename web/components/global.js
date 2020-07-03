@@ -79,7 +79,7 @@ html {
 
   .cause.yemen {
     &:after {
-      background: #F9C701;  
+      background: #F9C701;
     }
   }
 

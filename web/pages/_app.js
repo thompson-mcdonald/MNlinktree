@@ -62,7 +62,7 @@ class App extends BaseApp {
      <Background>
       <Container>
       <DarkModeToggle />
-      <PageTransition timeout={300} classNames="page-transition">
+      <PageTransition timeout={500} classNames="page-transition">
         <Component {...pageProps} />
       </PageTransition>
      <style jsx global>{`
@@ -72,7 +72,7 @@ class App extends BaseApp {
           }
           .page-transition-enter-active {
             opacity: 1;
-            transition: opacity 300ms;
+            transition: opacity 1000ms;
           }
           .page-transition-exit {
             opacity: 1;
@@ -80,7 +80,7 @@ class App extends BaseApp {
           }
           .page-transition-exit-active {
             opacity: 0;
-            transition: opacity 300ms;
+            transition: opacity 3000ms;
           }
         `}</style>
       </Container>
