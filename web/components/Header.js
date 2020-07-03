@@ -76,7 +76,7 @@ class Header extends Component {
         <h1 className={styles.branding}>
           <Link
             href={{
-              pathname: '/LandingPage',
+              pathname: '/landingpage',
               query: {
                 slug: '/'
               }
@@ -93,12 +93,12 @@ class Header extends Component {
               navItems.map(item => {
                 const {slug, title, _id} = item
                 const isActive =
-                  router.pathname === '/LandingPage' && router.query.slug === slug.current
+                  router.pathname === '/landingpage' && router.query.slug === slug.current
                 return (
                   <li key={_id} className={styles.navItem}>
                     <Link
                       href={{
-                        pathname: '/LandingPage',
+                        pathname: '/landingpage',
                         query: {slug: slug.current}
                       }}
                       as={`/${slug.current}`}

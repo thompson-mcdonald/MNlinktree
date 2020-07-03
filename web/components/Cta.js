@@ -10,7 +10,7 @@ function cta (props) {
     return (
       <Link
         href={{
-          pathname: '/LandingPage',
+          pathname: '/landingpage',
           query: {slug: route.slug.current}
         }}
         as={`/${route.slug.current}`}

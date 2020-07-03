@@ -106,7 +106,7 @@ const Alert = styled.div`
   }
 `
 
-const LandingPage = ({yemen}) => {
+const Yemen = ({yemen}) => {
   return (
     <Layout pageTitle="HELP YEMEN" childPage>
       <Head>
@@ -144,14 +144,14 @@ const LandingPage = ({yemen}) => {
   )
 }
 
-export default LandingPage
+export default Yemen
 
-LandingPage.propTypes = {
+Yemen.propTypes = {
   // links: PropTypes.arrayOf(PropTypes.node),
   yemen: []
 }
 
-LandingPage.getInitialProps = async () => ({
+Yemen.getInitialProps = async () => ({
   // links: await sanityClient.fetch(getAllLinks),
   yemen: await sanityClient.fetch(getYemenLinks)
 })

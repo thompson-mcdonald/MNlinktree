@@ -14,12 +14,12 @@ function Footer (props) {
           {navItems &&
             navItems.map(item => {
               const isActive =
-                router.pathname === '/LandingPage' && router.query.slug === item.slug.current
+                router.pathname === '/landingpage' && router.query.slug === item.slug.current
               return (
                 <li key={item._id} className={styles.item}>
                   <Link
                     href={{
-                      pathname: '/LandingPage',
+                      pathname: '/landingpage',
                       query: {slug: item.slug.current}
                     }}
                     as={`/${item.slug.current}`}
