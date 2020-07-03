@@ -15,6 +15,13 @@ const Bubble = styled.div`
     margin: 0;
     padding: 0;
   }
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
 
   svg {
     height: 18px;
@@ -22,6 +29,25 @@ const Bubble = styled.div`
     margin-right: 12px;
     g {
       fill: white;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 4px;
+    p {
+      font-size: 11px;
+    }
+
+    svg {
+      margin-right: 8px;
+      height: 20px;
+      width: 20px;
+    }
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
     }
   }
 `
@@ -39,7 +65,11 @@ function BubbleText (props) {
         </g>
     </svg>
 
-    <strong><p>Please put https://supportpeople.online in your bio or in a Swipe Up story if you have over 10k followers</p></strong>
+    <strong>
+    <p className='desktop'>Please put https://supportpeople.online in your bio or in a Swipe Up story if you have over 10k followers</p>
+    <p className='mobile'>Please put https://supportpeople.online in your instagram or twitter bio</p>
+
+    </strong>
     </Bubble>
   )
 }
