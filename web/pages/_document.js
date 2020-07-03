@@ -56,7 +56,6 @@ export default class MyDocument extends Document {
           <meta property="twitter:description" content="Support those on the ground, online" />
           <meta property="twitter:image" content="https://supportpeople.s3.eu-west-2.amazonaws.com/summary_large_image.png" />
         </Head>
-
         <body>
           <script src="/noflash.js"></script>
           <Main />
