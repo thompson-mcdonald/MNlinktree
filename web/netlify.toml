@@ -1,6 +1,14 @@
 [[redirects]]
-  from = "/old-path"
-  to = "/new-path"
+  from = "/yemen"
+  to = "/yemen"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+
+  [[redirects]]
+  from = "/blacklivesmatter"
+  to = "/blacklivesmatter"
   status = 301
   force = false
   query = {path = ":path"}
