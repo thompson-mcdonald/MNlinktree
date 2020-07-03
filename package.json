@@ -16,5 +16,12 @@
   "devDependencies": {
     "@sanity/cli": "^1.149.13",
     "lerna": "^3.9.0"
+  },
+  "dependencies": {
+    "next": "^9.4.5-canary.28",
+    "next-page-transitions": "^1.0.0-beta.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-transition-group": "^4.4.1"
   }
 }

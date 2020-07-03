@@ -18,6 +18,11 @@ const Title = styled.div`
   a:hover {
     opacity: .7
   }
+  width: 98%;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 const Outer = styled.div`
@@ -106,96 +111,7 @@ const Alert = styled.div`
   }
 `
 
-const Bubble = styled.div`
-  border-radius: 17px;
-  padding: 2px 16px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  margin-bottom: 16px;
-  transition: all .4s ease;
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
-  svg {
-    height: 18px;
-    width: 18px;
-    margin-right: 12px;
-    g {
-      fill: white;
-    }
-  }
-`
-
-const TitleLine = styled.h2`
-  width: 100%;
-  position: relative;
-  margin-bottom: 20px;
-  line-height: 60px;
-  &:after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    bottom: 0;
-    height: 1px;
-    background: black;
-  }
-`
-
-const Causes = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-
-  .cause {
-    width: 48%;
-    padding: 0 1em;
-  //  padding-left: 0;
-    transition: all .4s ease;
-    position: relative;
-    text-decoration: none;
-    color: white;
-    h3 {
-      color: white;
-      text-decoration: none;
-    }
-    &:after {
-      position: absolute;
-      content: '';
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: block;
-      z-index: -1;
-      opacity: 0.8;
-    }
-    &:hover {
-      padding-left: 1.3em;
-      &:after {
-        opacity: 1;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    .cause {
-      width: 100%;
-      margin-bottom: 16px;
-    }
-  }
-`
-
-const LandingPage = ({categories}) => {
+const BlackLivesMatter = ({categories}) => {
   console.log(categories)
 
   const getRandomInt = (max) => {
@@ -228,46 +144,64 @@ const LandingPage = ({categories}) => {
   console.log(categories[0].links[getRandomInt(2)].donateUrl)
 
   return (
-    <Layout navigation={navItems} pageTitle='SUPPORT, LEARN, SHARE'>
+    <Layout navigation={navItems} pageTitle='BLACK LIVES MATTER' childPage>
       <Head>
-        <title>SUPPORTPEOPLE.ONLINE</title>
+        <title>SUPPORTPEOPLE.ONLINE - BLACK LIVES MATTER</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
 
       <Alert className="alert">
-        <p>Initially spurred on by the BlackLivesMatter movement we created supportpeople.online in an attempt to collate and collect resources</p>
-        <p>With a wave of support online for those who are suffering we hope this place can extend and support those who need it most.</p>
-        <p>Always eager to adapt, learn and develop please use the contact from below via 'Let us know' to inform us of any further information you might feel appropriate</p>
+        <p>Due to the large number of protests across the world in response to the murder of George Floyd; there is a need for donations to Bail Funds that allow people to get out of jail while protesting. Protest is a crucial part of society, and no one should be left destitute by exercising their rights and fighting racism.</p>
         <p>We’ve collated links to bail funds and GoFundMe campaigns, so you can use your one Instagram link to support multiple causes</p>
         <BubbleText />
       </Alert>
 
+      <BtnRow className='blacklivesmatter'>
+        <CTA href={categories[0].links[getRandomInt(20)].donateUrl} target='_blank'>Random Fund</CTA>
+        <CTA href='https://secure.actblue.com/donate/bail_funds_george_floyd' target='_blank'>Split a donation</CTA>
+      </BtnRow>
+
       <p>Are we missing anything? <a target='_blank' href='https://forms.gle/JKmAZTAh4am5Dawy7'>Let us know</a> </p>
 
-      <TitleLine>Causes to support</TitleLine>
-
-      <Causes>
-      <a className='cause blm' href="/blacklivesmatter">
-        <h3>Black Lives Matter</h3>
-      </a>
-
-      <a className='cause yemen' href="/yemen">
-        <h3>Yemen</h3>
-      </a>
-      </Causes>
-
+      {categories && categories.map((cat) => {
+        return (
+          <BoxHalf id={cat.title}>
+            <h2>{cat.title}</h2>
+            <p>{cat.description}</p>
+            <div>
+              <FlexBox>
+                {cat.links && cat.links.map((l) => {
+                  return (
+                    <Outer className='blacklivesmatter'>
+                      <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
+                      <Info>
+                        {l.url && (
+                          <a className='button' href={l.url} target='_blank'>View Info</a>
+                        )}
+                        {l.donateUrl && (
+                          <a className='button' href={l.donateUrl} target='_blank'>+ Make a Donation</a>
+                        )}
+                      </Info>
+                    </Outer>
+                  )
+                })}
+              </FlexBox>
+            </div>
+          </BoxHalf>
+        )
+      })}
     </Layout>
   )
 }
 
-export default LandingPage
+export default BlackLivesMatter
 
-LandingPage.propTypes = {
+BlackLivesMatter.propTypes = {
   // links: PropTypes.arrayOf(PropTypes.node),
   categories: []
 }
 
-LandingPage.getInitialProps = async () => ({
+BlackLivesMatter.getInitialProps = async () => ({
   // links: await sanityClient.fetch(getAllLinks),
   categories: await sanityClient.fetch(getAllCategories)
 })

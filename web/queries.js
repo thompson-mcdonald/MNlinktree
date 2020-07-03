@@ -24,3 +24,10 @@ export const getAllCategories = groq`*[_type == 'category'] | order(title) {
     donateUrl
   },
 }`
+
+export const getYemenLinks = groq`*[_type == 'yemen'] | order(title) {
+  'title': title,
+  'description': description,
+  'url': url,
+  'donateUrl': donateUrl
+}`
