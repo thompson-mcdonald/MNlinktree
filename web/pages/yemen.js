@@ -114,8 +114,9 @@ const LandingPage = ({yemen}) => {
         <meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
       </Head>
       <Alert className="alert">
-      <p>Yemen is suffering one of the largest humanitarian crisis of modern times. Currently devastated simultaneously by civil war, epidemic, famine & COVID-19. The healthcare system of Yemen has essentially collapsed with conflict devastating families and in particular - children.
-      With United Nation pleas for financial aid from governing bodies and governments, we've collated a list of funds and places that we as citizins of the world can lend our support to provide food, equipment and protection for those in need or providing support.</p>
+      <p>Yemen is suffering one of the largest humanitarian crisis of modern times.</p>
+      <p>Currently devastated simultaneously by civil war, an epidemic, famine & COVID-19. The healthcare system of Yemen has essentially collapsed with conflict devastating families.</p>
+      <p>Alongside United Nation pleas for financial aid from governing bodies and governments alike, we've collated a list of funds and places that we as citizins of the world can lend our support to provide food, equipment and protection for those in need.</p>
       <BubbleText />
       </Alert>
 
