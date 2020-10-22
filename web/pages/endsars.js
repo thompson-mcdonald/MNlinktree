@@ -117,7 +117,6 @@ const LandingPage = ({endsars}) => {
       <p>#EndSARS is a social movement in Nigeria that started on Twitter calling for banning of the Special Anti-Robbery Squad, a unit of the Nigerian Police Force It is a call to end police oppression and brutality in Nigeria.</p>
       <p>The protests started as a social media campaign using the hashtag #ENDSARS to demand for Nigeria's government to scrap and end the deployment of Nigeria Police Force Special Anti-Robbery Squad, popularly known as SARS.</p>
       <p>Nigerians have shared both stories and video evidence of how members of SARS engaged in kidnapping, murder, theft, rape, torture, unlawful arrests, high-handedness, humiliation, unlawful detention, extrajudicial killings, and extortion.</p>
-      <br />
       <p>We can not forget the lives that were lost in the Lekki Massacre.</p>
       <BubbleText />
       </Alert>
@@ -127,7 +126,7 @@ const LandingPage = ({endsars}) => {
 
         {endsars && endsars.map((l) => {
           return (
-            <Outer className='yemen'>
+            <Outer className='endsars'>
               <Title><a href={l.url} target='_blank'>{l.title}</a></Title>
               <Info>
                 {l.url && (

@@ -65,7 +65,7 @@ html {
 
   .endsars .button {
     background: #008850 !important;
-    color: black !important;
+    color: white !important;
   }
 
   .blacklivesmatter .button {
