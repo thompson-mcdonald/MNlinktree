@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import link from './link'
 import category from './category'
 import yemen from './yemen'
+import endsars from './endsars'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,6 +18,7 @@ export default createSchema({
   types: schemaTypes.concat([
     link,
     category,
-    yemen
+    yemen,
+    endsars
   ])
 })

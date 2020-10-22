@@ -152,10 +152,11 @@ const Causes = styled.div`
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-
+  flex-wrap: wrap;
   .cause {
     width: 48%;
     padding: 0 1em;
+    margin-bottom: 1em;
   //  padding-left: 0;
     transition: all .4s ease;
     position: relative;
@@ -252,7 +253,11 @@ const LandingPage = ({categories}) => {
       </a>
 
       <a className='cause yemen' href="/yemen">
-        <h3>Yemen</h3>
+        <h3>Help Yemen</h3>
+      </a>
+
+      <a className='cause endsars' href="/endsars">
+        <h3>End Sars</h3>
       </a>
       </Causes>
 

@@ -31,3 +31,10 @@ export const getYemenLinks = groq`*[_type == 'yemen'] | order(title) {
   'url': url,
   'donateUrl': donateUrl
 }`
+
+export const getEndSarsLinks = groq`*[_type == 'endsars'] | order(title) {
+  'title': title,
+  'description': description,
+  'url': url,
+  'donateUrl': donateUrl
+}`

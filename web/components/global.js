@@ -63,6 +63,11 @@ html {
 
   }
 
+  .endsars .button {
+    background: #008850 !important;
+    color: black !important;
+  }
+
   .blacklivesmatter .button {
     background: #ce4b49 !important;
     border: 1px solid #ce4b49;
@@ -80,6 +85,12 @@ html {
   .cause.yemen {
     &:after {
       background: #F9C701;
+    }
+  }
+
+  .cause.endsars {
+    &:after {
+      background: #008850;
     }
   }
 
