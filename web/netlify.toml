@@ -6,7 +6,7 @@
   query = {path = ":path"}
   conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
 
-  [[redirects]]
+[[redirects]]
   from = "/blacklivesmatter"
   to = "/blacklivesmatter"
   status = 301
@@ -14,7 +14,7 @@
   query = {path = ":path"}
   conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
 
-    [[redirects]]
+[[redirects]]
   from = "/endsars"
   to = "/endsars"
   status = 301
